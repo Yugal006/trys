@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator</title>
+	<script type="text/javascript">
+		function add() {
+			let a = parseInt(form1.tb1.value);
+			let b = parseInt(form1.tb2.value);
+			document.getElementById('container').innerHTML=`<h2>${a+b}</h2>`;
+		}
+		function subtract() {
+			let a = parseInt(form1.tb1.value);
+			let b = parseInt(form1.tb2.value);
+			document.getElementById('container').innerHTML=`<h2>${a-b}</h2>`;
+		}
+		function divide() {
+			let a = parseInt(form1.tb1.value);
+			let b = parseInt(form1.tb2.value);
+			document.getElementById('container').innerHTML=`<h2>${a/b}</h2>`;
+		}
+		function multiply() {
+			let a = parseInt(form1.tb1.value);
+			let b = parseInt(form1.tb2.value);
+			document.getElementById('container').innerHTML=`<h2>${a*b}</h2>`;
+		}
+	</script>
+	<style type="text/css">
+		#btn{
+			color: white;
+			border: 1px solid black;
+			border-radius: 20px;
+			background: black;
+			font-family: arial;
+			font-weight: bold;
+			padding: 10px 25px;
+			font-size: 15px;
+			margin: 10px;
+			}
+		#tb{
+			margin: 10px 10px;
+    		border: solid 2px yellowgreen;
+    		border-radius: 25px;
+    		padding: 15px 20px;
+		}
+	</style>
+</head>
+<body>
+	<div align="center">
+		<form name="form1">
+			<input type="text" name="tb1" id="tb" placeholder="enter the first number">
+			<input type="text" name="tb2" id="tb" placeholder="enter the second number"><br><br>
+			<input type="button" name="btn1" id="btn"  value="add" onclick="add()">
+			<input type="button" name="btn2" id="btn"  value="subtarct" onclick="subtract()">
+			<input type="button" name="btn3" id="btn"  value="multiple" onclick="multiply()">
+			<input type="button" name="btn4" id="btn"  value="divide" onclick="divide()">
+		</form>
+		<div id="container"></div>
+	</div>
+</body>
+</html>

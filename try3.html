@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+	<title>Greeting</title>
+	<script type="text/javascript">
+		function greeting() {
+			let d = new Date();
+			let time = d.getHours();
+			if (time<=12) {
+				document.getElementById('container').innerHTML=`<h2>Good Morning🌞</h2>`;
+			}
+			else if (time>=12 && time<=17) {
+				document.getElementById('container').innerHTML=`<h2>Good Afternoon⛅</h2>`;
+			} 
+			else if (time>=17 && time<=22) {
+				document.getElementById('container').innerHTML=`<h2>Good Evening🌇</h2>`;
+			}
+			else {
+				document.getElementById('container').innerHTML=`<h2>Good Night🌙</h2>`;
+			}
+		}
+	</script>
+	<style type="text/css">
+
+		*{	
+			font-family: 'Lobster', sans-serif;
+		}
+		#btn{
+				color: white;
+				border-radius: 20px;
+				background: black;
+				font-family: arial;
+				font-weight: bold;
+				padding: 10px 25px;
+				font-size: 25px;
+			}
+		#container{
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div align="center">
+		<form>
+			<input type="button" value="Greeting" name="btn" id="btn" onclick="greeting()">
+		</form>
+	</div>
+	<div id="container" align="center"></div>
+</body>
+</html>

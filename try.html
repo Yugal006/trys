@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>iframe</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			#frame{
+				display: flex;
+			}
+			#frame1{
+				display: flex;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+	<body>
+		<section id="frame">
+			<iframe src="https://www.bing.com" width="1250px" frameborder="0" height="500px">bing.com</iframe>
+			<div id="frame2">
+				<iframe width="600" height="315" src="https://www.youtube.com/embed/VVsC2fD1BjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>youtube</iframe>
+				<iframe srcdoc="
+				<pre># Multiplication table (from 1 to 10) in Python
+
+#num = 12
+num = int(input('Display multiplication table of? '))
+					        
+# Iterate 10 times from i = 1 to 10
+for i in range(1, 11):
+print(num, 'x', i, '=', num*i)</pre>
+<h1>This is pre tag</h1>"
+				width="500px" frameborder="0" height="250px">python code</iframe>
+			</div>
+			<div id="frame1">
+				<iframe srcdoc="<p>Mg + O <sub>2</sub> = MGO</p>
+				<p>Zn + HCl = ZnCl<sub>2</sub> + H <sub>2</sub></p>" width="200px" frameborder="0" height="100px">reaction</iframe>
+				<iframe srcdoc="<h1 align='left'>Books To Read</h1>
+				<h2 align='center'>Books To Read</h2>
+				<h3 align='right'>Books To Read</h3>" width="300px" frameborder="0" height="300px">reaction</iframe>
+			</div>
+		</section>
+	</body>
+</html>
